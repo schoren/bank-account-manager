@@ -1,8 +1,8 @@
 <?php
 
-namespace Support\Mail;
+namespace BAM\Support\Mail;
 
-use Util\EmailAddress;
+use BAM\Util\EmailAddress;
 
 class Email
 {

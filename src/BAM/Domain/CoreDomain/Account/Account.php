@@ -1,8 +1,8 @@
 <?php
 
-namespace BAM\Domain\Account;
+namespace BAM\Domain\CoreDomain\Account;
 
-use BAM\Domain\Transaction\Transaction;
+use BAM\Domain\CoreDomain\Transaction\Transaction;
 use BAM\Util\Collection\ReadOnlyCollection;
 use BAM\Util\Currency;
 use BAM\Util\Money;

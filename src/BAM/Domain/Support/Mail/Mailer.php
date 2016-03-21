@@ -1,6 +1,6 @@
 <?php
 
-namespace Support\Mail;
+namespace BAM\Support\Mail;
 
 interface Mailer
 {

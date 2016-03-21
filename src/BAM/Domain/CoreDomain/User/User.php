@@ -1,8 +1,8 @@
 <?php
 
-namespace BAM\Domain\User;
+namespace BAM\Domain\CoreDomain\User;
 
-use BAM\Domain\Account\Account;
+use BAM\Domain\CoreDomain\Account\Account;
 use BAM\Util\EmailAddress;
 use Doctrine\Common\Collections\ArrayCollection;
 use \InvalidArgumentException;

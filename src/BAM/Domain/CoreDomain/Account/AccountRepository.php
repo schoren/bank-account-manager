@@ -1,8 +1,8 @@
 <?php
 
-namespace BAM\Domain\Account;
+namespace BAM\Domain\CoreDomain\Account;
 
-use BAM\Domain\User\User;
+use BAM\Domain\CoreDomain\User\User;
 use BAM\Util\Exception\EntityNotFoundException;
 use Doctrine\Collections\Collection;
 

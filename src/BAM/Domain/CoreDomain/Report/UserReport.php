@@ -1,8 +1,8 @@
 <?php
 
-namespace BAM\Domain\Report;
+namespace BAM\Domain\CoreDomain\Report;
 
-use BAM\Domain\User\User;
+use BAM\Domain\CoreDomain\User\User;
 use BAM\Util\DateRange;
 use Doctrine\Common\Collections\Collection;
 

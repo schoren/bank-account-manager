@@ -1,9 +1,9 @@
 <?php
 
-namespace BAM\Domain\Report;
+namespace BAM\Domain\CoreDomain\Report;
 
-use BAM\Domain\Transaction\TransactionRepository;
-use BAM\Domain\User\User;
+use BAM\Domain\CoreDomain\Transaction\TransactionRepository;
+use BAM\Domain\CoreDomain\User\User;
 use BAM\Util\DateRange;
 use Doctrine\Collections\ArrayCollection;
 use \DateTime;

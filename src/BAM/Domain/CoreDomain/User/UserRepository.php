@@ -1,6 +1,6 @@
 <?php
 
-namespace BAM\Domain\User;
+namespace BAM\Domain\CoreDomain\User;
 
 use BAM\Util\EmailAddress;
 use BAM\Util\Exception\EntityNotFoundException;

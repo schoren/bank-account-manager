@@ -1,6 +1,6 @@
 <?php
 
-namespace BAM\Domain\Transaction;
+namespace BAM\Domain\CoreDomain\Transaction;
 
 interface TransactionRepository
 {

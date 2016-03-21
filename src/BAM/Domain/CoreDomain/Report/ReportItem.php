@@ -1,8 +1,8 @@
 <?php
 
-namespace BAM\Domain\Report;
+namespace BAM\Domain\CoreDomain\Report;
 
-use BAM\Domain\Account\Account;
+use BAM\Domain\CoreDomain\Account\Account;
 use BAM\Util\Money;
 
 final class ReportItem
