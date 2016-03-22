@@ -1,0 +1,8 @@
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+
+code_coverage:
+  format:
+    - text
+  output:
+    text: coverage.txt
