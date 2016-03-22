@@ -1,5 +1,6 @@
-extensions:
-    - PhpSpec\Extension\CodeCoverageExtension
+# uncomment to enable code coverage
+#extensions:
+#    - PhpSpec\Extension\CodeCoverageExtension
 
 code_coverage:
   format:
