@@ -61,7 +61,7 @@ final class User
      * @param  string       $password the password
      * @return User         the new user
      */
-    public function signup($name, EmailAddress $email, $password)
+    public static function signup($name, EmailAddress $email, $password)
     {
         return new self($name, $email, $password);
     }

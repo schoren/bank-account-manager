@@ -5,7 +5,8 @@ namespace BAM\Domain\CoreDomain\Report;
 use BAM\Domain\CoreDomain\Transaction\TransactionRepository;
 use BAM\Domain\CoreDomain\User\User;
 use BAM\Util\DateRange;
-use Doctrine\Collections\ArrayCollection;
+use BAM\Util\Money;
+use Doctrine\Common\Collections\ArrayCollection;
 use \DateTime;
 
 final class Reporter
@@ -32,7 +33,7 @@ final class Reporter
      */
     public function getWeeklyReportForUser(User $user, DateTime $startDate)
     {
-        list($year, $week) = explode('-', $startDate->fomat('Y-W'));
+        list($year, $week) = explode('-', $startDate->format('Y-W'));
         $dateRange = DateRange::createWeekRange($year, $week);
 
         return $this->getReport($user, $dateRange);
@@ -46,7 +47,7 @@ final class Reporter
      */
     public function getMonthlyReportForUser(User $user, DateTime $startDate)
     {
-        list($year, $month) = explode('-', $startDate->fomat('Y-m'));
+        list($year, $month) = explode('-', $startDate->format('Y-m'));
         $dateRange = DateRange::createMonthRange($year, $month);
 
         return $this->getReport($user, $dateRange);
@@ -65,7 +66,7 @@ final class Reporter
             $transactions = $this->transactionRepository->findByAccountAndDateRange($account, $dateRange);
             $total = 0;
             foreach ($transactions as $transaction) {
-                $total += $transaction->getAmount()->getAmount();
+                $total += $transaction->getAmount()->getValue();
             }
             $items->add(new ReportItem($account, new Money($total, $account->getCurrency())));
         }

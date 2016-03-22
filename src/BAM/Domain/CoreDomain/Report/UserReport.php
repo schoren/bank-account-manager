@@ -31,6 +31,16 @@ final class UserReport
     }
 
     /**
+     * Get the report User
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
      * Get the report date range
      *
      * @return DateRange

@@ -2,6 +2,9 @@
 
 namespace BAM\Domain\CoreDomain\Transaction;
 
+use BAM\Domain\CoreDomain\Account\Account;
+use BAM\Util\DateRange;
+
 interface TransactionRepository
 {
     /**
