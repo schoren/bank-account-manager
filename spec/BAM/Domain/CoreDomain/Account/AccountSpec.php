@@ -28,9 +28,21 @@ class AccountSpec extends ObjectBehavior
 
     public function it_can_be_created_with_balance()
     {
-        $this->beConstructedThrough('createWithBalance', ['Test Account', Currency::USD(), new Money(120, Currency::USD())]);
+        $this->beConstructedThrough('createWithBalance',
+            ['Test Account', Currency::USD(), new Money(120, Currency::USD())]
+        );
         $this->getBalance()->getValue()->shouldBe(120);
         $this->getBalance()->getCurrency()->getValue()->shouldBe('USD');
+        $this->getName()->shouldBe('Test Account');
+    }
+
+    public function it_can_be_created_with_different_currency()
+    {
+        $this->beConstructedThrough('createWithBalance',
+            ['Test Account', Currency::EUR(), new Money(120, Currency::EUR())]
+        );
+        $this->getBalance()->getValue()->shouldBe(120);
+        $this->getBalance()->getCurrency()->getValue()->shouldBe('EUR');
         $this->getName()->shouldBe('Test Account');
     }
 

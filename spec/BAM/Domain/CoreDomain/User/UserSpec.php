@@ -42,4 +42,13 @@ class UserSpec extends ObjectBehavior
         $this->getSettings()->getWeeklyEmail()->shouldBe(false);
         $this->getSettings()->getMonthlyEmail()->shouldBe(false);
     }
+
+    public function it_can_configure_settings()
+    {
+        $this->getSettings()->setWeeklyEmail(true);
+        $this->getSettings()->setMonthlyEmail(true);
+
+        $this->getSettings()->getWeeklyEmail()->shouldBe(true);
+        $this->getSettings()->getMonthlyEmail()->shouldBe(true);
+    }
 }

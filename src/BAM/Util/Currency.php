@@ -13,6 +13,9 @@ final class Currency
      */
     private $currency;
 
+    /**
+     * @var array
+     */
     private $valid_currencies = array(
         'USD',
         'EUR',
@@ -23,7 +26,7 @@ final class Currency
      * @param string $currency the currency
      * @throws InvalidArgumentException if the given currency is not supported
      */
-    public function __construct($currency)
+    private function __construct($currency)
     {
         if (!in_array($currency, $this->valid_currencies)) {
             throw new InvalidArgumentException(
