@@ -47,6 +47,7 @@ final class Account
             throw new InvalidArgumentException('Balance currency does not match account currency');
         }
 
+        $this->id = uniqid();
         $this->name = $name;
         $this->currency = $currency;
         $this->balance = $balance;

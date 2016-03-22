@@ -19,6 +19,11 @@ class AccountSpec extends ObjectBehavior
         $this->shouldHaveType('BAM\Domain\CoreDomain\Account\Account');
     }
 
+    public function it_should_have_id()
+    {
+        $this->getId()->shouldNotBe(null);
+    }
+
     public function it_should_be_configured()
     {
         $this->getBalance()->getValue()->shouldBe(0);

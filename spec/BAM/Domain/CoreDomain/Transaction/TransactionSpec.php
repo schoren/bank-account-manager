@@ -18,6 +18,11 @@ class TransactionSpec extends ObjectBehavior
         $this->shouldHaveType('BAM\Domain\CoreDomain\Transaction\Transaction');
     }
 
+    public function it_should_have_id()
+    {
+        $this->getId()->shouldNotBe(null);
+    }
+
     public function it_should_be_configured()
     {
         $this->getAmount()->getValue()->shouldBe(120);

@@ -30,6 +30,7 @@ final class Transaction
      */
     private function __construct(Money $amount, DateTime $created_at)
     {
+        $this->id = uniqid();
         $this->amount = $amount;
         $this->created_at = $created_at;
     }

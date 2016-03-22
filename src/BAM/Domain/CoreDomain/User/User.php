@@ -47,6 +47,7 @@ final class User
      */
     private function __construct($name, EmailAddress $email, $password)
     {
+        $this->id = uniqid();
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;

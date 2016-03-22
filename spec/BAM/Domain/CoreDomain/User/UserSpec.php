@@ -19,6 +19,11 @@ class UserSpec extends ObjectBehavior
         $this->shouldHaveType('BAM\Domain\CoreDomain\User\User');
     }
 
+    public function it_should_have_id()
+    {
+        $this->getId()->shouldNotBe(null);
+    }
+
     public function it_should_allow_add_accounts()
     {
         $account = Account::create('Test', Currency::USD());
