@@ -6,7 +6,7 @@ use BAM\Domain\CoreDomain\User\User;
 use BAM\Util\Exception\EntityNotFoundException;
 use Doctrine\Collections\Collection;
 
-interface UserRepository
+interface AccountRepository
 {
     /**
      * Find all accounts for a User
